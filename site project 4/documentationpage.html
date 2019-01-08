@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="documentationstyle.css">
+</head>
+
+<nav id="navbar">
+  <header>Py Documentation</header>
+  <ul> 
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#What_you_should_already_know" rel="internal"><li>What you should already know</li></a>
+    <a class="nav-link" href="#Python_and_Other_Languages" rel="internal"><li>Python and Other Languages</li></a>
+    <a class="nav-link" href="#Hello_World" rel="internal"><li>Hello world</li></a>
+    <a class="nav-link" href="#Variables" rel="internal"><li>Variables</li></a>
+    <a class="nav-link" href="#Declaring_variables" rel="internal"><li>Declaring variables</li></a>
+    <a class="nav-link" href="#Variable_Scope" rel="internal"><li>Variable scope</li></a>
+    <a class="nav-link" href="#Strings" rel="internal"><li>Strings</li></a>
+    <a class="nav-link" href="#Lists" rel="internal"><li>Lists</li></a>
+    <a class="nav-link" href="#Data_types" rel="internal"><li>Data types</li></a>
+    <a class="nav-link" href="#if...else_statement" rel="internal"><li>if...else statement</li></a>
+    <a class="nav-link" href="#while_statement" rel="internal"><li>while statement</li></a>
+    <a class="nav-link" href="#Function_declaration" rel="internal"><li>Function declaration</li></a>
+    <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>  
+      <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming</p>
+
+      <p>The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, https://www.python.org/, and may be freely distributed.</p>
+
+      <li>The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C)</li>
+      <li>Python is also suitable as an extension language for customizable applications.</li>
+    </artice>
+    </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+
+      <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+      <li>Good working knowledge of Basic Data Structures and Algorithms.</li>
+	  <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about Python.</li>
+      </artice>
+    </section>
+  <section class="main-section" id="Python_and_Other_Languages">
+    <header>Python and Other Languages</header>
+    <article>
+      <p>Python and other languages are similar in some ways but fundamentally and syntactically different. If you’re a professional software developer, you may have to work with several C/C++/Java libraries but find the usual write/compile/test/re-compile cycle is too slow.</p>
+
+      <p>Python also offers much more error checking than C, and, being a very-high-level language, it has high-level data types built in, such as flexible arrays and dictionaries.</p>
+      <p> Because of its more general data types Python is applicable to a much larger problem domain than Awk or even Perl, yet many things are at least as easy in Python as in those languages.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Hello_World">
+    <header>Hello World</header>
+    <article> 
+      To get started with writing Python, open the Notepad and write your first "Hello world" Python code:
+      <code>
+def helloWorld(fName):
+	print('Hello World, ' + fName)
+    
+	fName = 'John'
+	helloWorld(fName)
+	  
+Output: Hello World, John
+      </code>
+
+	  Select the code and run it in an interpreter. Your first Python program is complete.
+    </article>
+    </section>
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <p>
+    In Python, variables are a storage placeholder for texts and numbers.
+    </p>
+    <p>
+    Python is dynamically typed, which means that you don't have to declare what type each variable is. The variable is always assigned with the equal sign, followed by the value of the variable. 
+    </p>
+    <p>
+    Some examples of legal names are fName, width, and sum99.
+	
+	A variable cannot begin with an integer and must begin with a lowercase letter.
+    </p>
+   
+    </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>Declaring variables</header>
+    <article>
+	  You can use a variable in several ways:
+      <p>
+        For example, <code>x = 10.</code> This syntax can be used to declare both local and global variables.
+      </p>
+      <p>
+        You can declare a variable as an equation as well: <code>x = 5 * 2</code>
+      </p>
+      <p>
+        You do not need to declare variable before using it within your code and it can also be changed later in the program if necessary. 
+		<code> 
+x = 10
+print(x)
+
+print()
+
+x = x + 10
+print(x)
+		
+Output: 10
+	20
+		</code>
+		Each variable in Python is considered an object.
+      </p>
+    </article>
+    </section>
+  <section class="main-section" id="Variable_Scope">
+    <header>Variable Scope</header>
+    <article>
+      <p>A variable that is declared within a function is known as a local variable because it can only be used inside that function. A local function serves as a container for values that are to be manipulated within the function.</p>
+      <p>A variable declared out side all functions within your code is known as a global variable and can be used by the rest of the code. This is helpful when using an object within several different functions.</p>
+      <code>
+x = 10
+def main():
+    def foo(bar):
+	    ...
+        
+main() 
+	  </code>
+      <p>An example of a global variable outside our main function which can be used by all other functions.</p>
+
+	  <code>
+def main():
+	def foo(bar):
+		x = 10
+		...
+		
+	def bar(foo):
+		...
+	  </code>
+	  <p>In this example, x is a local variable within foo(). Calling bar(x) would return an error because that function cannot access the variable 'x'.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Strings">
+    <header>Strings</header>
+    <article>
+      <p>Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes ("...") with the same result.</p>
+
+      <p>Strings can be concatenated (glued together) with the + operator</p>
+	  
+	  <code>
+x = 'foo'
+y = 'bar'
+
+print (x + y)
+
+Output: foobar 
+	  </code>
+    </article>
+    </section>
+  <section class="main-section" id="Lists">
+    <header>Lists</header>
+    <article>
+	  <p>Python knows a number of compound data types, used to group together other values.</p>
+
+	  <p>The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets.</p>
+	  
+	  <code>
+myList = [1, 2, 3, 4]
+print(myList)
+
+Output: [1, 2, 3, 4] 	  
+	  </code>
+	  
+	  <p>Lists might contain items of different types, but usually the items all have the same type.</p>
+
+	  <p>Like strings (and all other built-in sequence type), lists can be indexed and sliced For example:</p>
+
+	  <code>
+myList = [1, 2, 3, 4]
+print(mylist[1])
+
+Output: [2]
+
+print(myList[-3:])
+Output: [2, 3, 4] 	  
+	  </code>
+    </article>
+    </section>
+  <section class="main-section" id="Data_types">
+    <header>Data types</header>
+    <article>
+      <p>Python's libraries contain 5 standard data types.</p>
+      <li>
+	  <p>Here are their names and examples of each:</p>
+	  <ul>
+        <li>Number. 3</li>
+		<li>String. "Hello World"</li>
+		<li>Tuple. ('One', 'Two', 'Three')</li>
+		<li>List. [1, 2, 3, 4]</li>
+		<li>Dictionairy. {'Apples': 3, 'Oranges': 8, 'Mangoes': 15}</li>
+		</ul>
+    </article>
+    </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+    Use an if/else statement to execute a block of code if a logical clause is true. use the elif keyword to present more logical clauses and end with the else keyword if the logical clauses are false. An if statement looks like this:
+
+    <code>
+	if x == 10:
+		print('x = 10') 
+	elif x > 10:
+		print('x > 10')    
+	else:
+		print('x < 10')
+	</code>
+	There can be zero or more elif parts, and the else part is optional. The keyword 'elif' is short for 'else if', and is useful to avoid excessive indentation. An if...elif...elif...sequence is a substitute for the switch or case statements found in other languages.
+    </article>
+    </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+	A while loop continues to execute its code block until a condtion is met. It looks like this:
+
+	<code>
+x = 8
+
+while x < 10:
+    x += 1
+    print(x)
+
+Output: 9
+	10
+    </code>
+
+	<p>The condition test occurs before statement in the loop is executed. If the condition returns true (meaning x is still less than 10), statement is executed and the condition is tested again. If the condition returns false (when x is equal to or greater than 10), execution stops and control is passed to the statement following while.</p>
+	<p>With each iteration, the function increments x. Therefore, x takes on the following values:</p>
+	<li>After the first pass: x = 9</li>
+	<li>After the second pass: x = 10</li>
+	
+	<p>After completing the second pass, the condition 'x < 10' is no longer true, so the loop terminates.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Function_declaration">
+    <header>Function declaration</header>
+    <article> 
+	  The keyword def introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented.
+
+	<code>
+def foo(bar):
+	...
+	</code>
+    </article>
+    </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://docs.python.org/3.7/tutorial/index.html" target="_blank">MDN</a>
+    </article>
+    </section>
+</main>
+
+</html>
